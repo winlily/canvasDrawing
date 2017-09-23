@@ -1,0 +1,197 @@
+@charset "UTF-8";
+/**
+ *
+ * @authors WangLi (1790676280@qq,com)
+ * @date    2016-07-07 11:29:50
+ * @version $Id$
+ */
+section{
+    margin: 0 auto;
+    width: 910px;
+    padding: 10px;
+    background-color: #F5F6F7;
+    border: 1px solid #DADBDC;
+}
+section>ul{
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+section>ul>li{
+    float: left;
+    height: 155px;
+    padding: 0 5px;
+    text-align: center;
+    border-left: solid 1px #DADBDC;
+    overflow: hidden;
+}
+section>ul>li:first-child{
+    border-left: none;
+}
+section>ul>li h2{
+    margin-bottom:10px;
+}
+section>ul>li>ul{
+    margin: 5px auto;
+    overflow: hidden;
+}
+
+select {
+    border-radius: 4px;
+    font-size: 13px;
+    height: 30px;
+    color: #a5a5a5;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+select:hover {
+    cursor: pointer;
+    font-weight: bold;
+    border: 1px solid #fbcb09;
+    color:#c77405;
+}
+select option[selected] {
+    font-weight: bold;
+}
+li ul {text-align: left;margin:0px 15px;}
+ul li {
+    margin-bottom: 5px;
+}
+
+.tool ul li,
+.insert ul li {
+    border:1px solid transparent;
+    padding: 0 5px;
+    float: left;
+    margin-left:5px;
+    margin-right: 5px;
+}
+
+.tool ul li:hover,
+.insert ul li:hover,
+.line-style ul.line-example li:hover {
+    background:#fff;
+    color:#1c94c4;
+    border:1px solid #eb8f00;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.tool ul li.active,.insert ul li.active,
+.line-style ul.line-example li.active {
+    background:#fff;
+    color:#1c94c4;
+    border:1px solid #eb8f00;
+    border-radius: 4px;
+    cursor: pointer;
+}
+/*工具*/
+.tool img{
+    width: 20px;
+    height: 20px;
+}
+.toolGroup-1 li,.toolGroup-2 li,.toolGroup-3 li {
+    cursor: pointer;
+}
+/*插入形状*/
+.insert img{
+    width: 20px;
+    height: 20px;
+}
+.line-style>ul>li {
+    border:1px solid transparent;
+    text-align: center;
+}
+.line-style>ul>li img{
+    width: 80px;
+}
+.line-style ul.line-example {
+    text-align: center;
+}
+.line-style ul.line-example li {
+    height: 12px;
+    line-height: 10px;
+    margin: 0 10px 5px 10px;
+}
+/*线型*/
+.line-shade select {
+    width: 60px;
+    margin-left: 6px;
+}
+/*颜色*/
+.color-edit li span.txt {
+    position: relative;
+    top:-3px;
+}
+.color{
+    padding: 0 20px;
+}
+.border-color,.fill-color {
+    display: inline-block;
+    border-radius: 4px;
+    width: 18px;
+    height: 18px;
+    padding: 5px 10px;
+    border:1px solid #ccc;
+    background:#fff;
+    cursor: pointer;
+}
+.border-color img,.fill-color img {
+    width:18px;
+    height: 18px;
+}
+.borderColorEdit {
+    background-color:#000;
+}
+.fillColorEdit {
+    background-color:#fdc68c;
+}
+.transparent .intro {
+    display: inline-block;
+    width:40px;
+    border:1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+    padding:3px 0px;
+    text-align: center;
+}
+.transparent-edit {
+    margin-top:5px;
+    padding:0px 2px 0 8px;
+}
+#master {
+    height: 5px;
+}
+#master span {
+    width:8px;
+    height: 12px;
+}
+/*字体*/
+.font-family select {
+    width:70px;
+}
+.font-size select {
+    width:60px;
+}
+
+/*canvas样式*/
+canvas{
+    display: block;
+    margin: 0 auto;
+    border: 1px dashed #ccc;
+    background-color: #fff;
+}
+.border-right{
+    border-right: 1px solid #DADBDC;
+}
+.canvas-div{
+    position:relative;
+    width: 860px;
+    height: 550px;
+    margin: 0 auto;
+}
+#canvas{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    background-color: rgba(0,0,0,0);
+}

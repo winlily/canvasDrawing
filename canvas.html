@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>canvas</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/iColor-min.css"/>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<section>
+		<ul>
+            <li class="tool">
+                <h2>工具</h2>
+                <ul class="toolGroup-1">
+                    <li class="tool-pencil" data-name="qianbi">
+                        <img src="img/pencil.png" alt="">
+                    </li>
+                    <li class="tool-brush" data-name="shuazi">
+                        <img src="img/brush.png" alt="">
+                    </li>
+                    <li class="tool-text" data-name="wenben">
+                        <img src="img/text.png" alt="">
+                    </li>
+                    <li class="tool-eraser" data-name="cazi">
+                        <img src="img/eraser.png" alt="">
+                    </li>
+                    <li class="tool-clear" data-name="clear">
+                        <img src="img/clear.png" alt="">
+                    </li>
+                </ul>
+                <ul class="toolGroup-2">
+                    <li class="tool-select" data-name="xuanze">选择</li>
+                    <li class="tool-rotation border-right" data-name="xuanzhuan">旋转</li>
+                    <li class="tool-enlarge" data-name="fangda">放大</li>
+                    <li class="tool-narrow border-right" data-name="suoxiao">缩小</li>
+                    <li class="tool-remove" data-name="yidong">移动</li>
+                </ul>
+                <ul class="toolGroup-3">
+                    <li class="tool-cancle" data-name="cancle">
+                        <img src="img/cancle.png" alt="">
+                    </li>
+                    <li class="tool-next">
+                    <li class="tool-next border-right" data-name="next">
+                        <img src="img/next.png" alt="">
+                    </li>
+                    <li class="tool-save" data-name="save">
+                        <img src="img/save.png" alt="">
+                    </li>
+                </ul>
+            </li>
+            <li class="insert">
+                <h2>插入</h2>
+                <ul class="insert-shape">
+                    <li class="insert-line" data-name="zhixian">
+                        <img src="img/line.png" alt="">
+                    </li>
+                    <li class="insert-poly" data-name="sanjiaoxing">
+                        <img src="img/poly.png" alt="">
+                    </li>
+                    <li class="insert-rect" data-name="juxing">
+                        <img src="img/rect.png" alt="">
+                    </li>
+                    <li class="insert-circle" data-name="yuan">
+                        <img src="img/arc.png" alt="">
+                    </li>
+                </ul>
+                <ul class="inser-pic">
+                    <li class="insert-shadow border-right" data-name="shadow">阴影</li>
+                    <li data-name="picture">图片</li>
+                </ul>
+            </li>
+            <li class="line-style">
+                <h2>线型</h2>
+                <ul class="line-example">
+                    <li class="line1px">
+                        <img src="img/line1px.png" alt="">
+                    </li>
+                    <li class="line3px">
+                        <img src="img/line3px.png" alt="">
+                    </li>
+                    <li class="line5px">
+                        <img src="img/line5px.png" alt="">
+                    </li>
+                    <!-- <li class="linemore">
+                      <img src="img/line8px.png" alt="">
+                    </li> -->
+                </ul>
+                <ul class="line-shade">
+                    <li>
+                        <select class="line-width">
+                            <option value="1" selected>1px</option>
+                            <option value="2">2px</option>
+                            <option value="3">3px</option>
+                            <option value="4">4px</option>
+                            <option value="5">5px</option>
+                            <option value="6">6px</option>
+                            <option value="7">7px</option>
+                            <option value="8">8px</option>
+                        </select>
+                        <span>：粗细</span>
+                    </li>
+                </ul>
+            </li>
+            <li class="color">
+                <h2>颜色</h2>
+                <ul class="color-edit">
+                    <li class="border">
+                        <span class="txt">边框色：</span>
+                		<span class="border-color">
+                			<img src="img/ui-color.png" class="borderColorEdit"/>
+                		</span>
+                    </li>
+                    <li class="fill">
+                        <span class="txt">填充色：</span>
+                		<span class="fill-color">
+                			<img src="img/ui-color.png" class="fillColorEdit"/>
+                		</span>
+                    </li>
+                    <li class="transparent">
+                        <span class="txt">透明度：</span>
+                        <span class="intro">100%</span>
+                        <div class="transparent-edit">
+                            <div id="master"></div>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li class="font-setting">
+                <h2>字体设置</h2>
+                <ul class="font-edit">
+                    <li class="font-size">
+                        <span class="txt">字体大小：</span>
+                        <select>
+                            <option value="8" selected>8px</option>
+                            <option value="9">9px</option>
+                            <option value="10">10px</option>
+                            <option value="11">11px</option>
+                            <option value="12">12px</option>
+                            <option value="13">13px</option>
+                            <option value="14">14px</option>
+                            <option value="15">15px</option>
+                            <option value="16">16px</option>
+                            <option value="17">17px</option>
+                            <option value="18">18px</option>
+                            <option value="19">19px</option>
+                            <option value="20">20px</option>
+                        </select>
+                    </li>
+                	<li class="font-family">
+                		<span class="txt">字体样式：</span>
+                		<select>
+                			<option value="" selected>宋体</option>
+                			<option value="">微软雅黑</option>
+                			<option value="">仿宋</option>
+                			<option value="">楷体</option>
+                			<option value="">隶书</option>
+                			<option value="">黑体</option>
+                			<option value="">Times New Roman</option>
+                			<option value="">Arial</option>
+                		</select>
+                	</li>
+                    <li class="tool-all">
+                        <span class="txt">工具：</span>
+                        <select id="tool-select">
+                            <option value="qianbi" selected>铅笔</option>
+                            <option value="shuazi">刷子</option>
+                            <option value="wenben">文本</option>
+                            <option value="cazi">擦子</option>
+                            <option value="zhixian">直线</option>
+                            <option value="sanjiaoxing">三角形</option>
+                            <option value="juxing">矩形</option>
+                            <option value="yuan">圆</option>
+                            <option value="xuanze">选择</option>
+                            <option value="xuanzhuan">旋转</option>
+                            <option value="suofang">缩放</option>
+                            <option value="yidong">移动</option>
+                        </select>
+                    </li>
+                </ul>
+            </li>
+		</ul>
+        <div class="canvas-div">
+            <canvas id="canvas_show" width="860" height="550"></canvas>
+            <canvas id="canvas" width="860" height="550"></canvas>
+        </div>
+        <input type="text" id="input_text" value="">
+        <input type="file" id="input_file" multiple>
+        <img id="img_test" src="">
+	</section>
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/iColor-min.js"></script>
+    <script type="text/javascript" src="js/canvas.js"></script>
+    <script>
+    </script>
+</body>
+</html>
